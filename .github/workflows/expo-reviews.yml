@@ -8,23 +8,23 @@ jobs:
             - uses: actions/checkout@v1
             - uses: actions/setup-node@v1
               with:
-				  node-version: 12.x
+				node-version: 12.x
 			- name: Download Firebase Config To Workspace
   			  uses: carlosperate/download-file-action@v1.0.3
 			  with:
-				  file-url: ${{ secrets.FIREBASE_CONFIG_URL }}
-				  file-name: 'firebaseConfig.ts'
-				  location: './components/Firebase'
+				file-url: ${{ secrets.FIREBASE_CONFIG_URL }}
+				file-name: 'firebaseConfig.ts'
+				location: './components/Firebase'
             - uses: expo/expo-github-action@v5
               with:
-                  expo-version: 3.x
-                  expo-username: ${{ secrets.EXPO_CLI_USERNAME }}
-                  expo-password: ${{ secrets.EXPO_CLI_PASSWORD }}
-                  expo-cache: true
+                expo-version: 3.x
+                expo-username: ${{ secrets.EXPO_CLI_USERNAME }}
+                expo-password: ${{ secrets.EXPO_CLI_PASSWORD }}
+                expo-cache: true
             - run: yarn install
             - run: expo publish --release-channel=pr-${{ github.event.number }}
             - uses: unsplash/comment-on-pr@master
               env:
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
               with:
-                  msg: App is ready for review, you can [see it here](https://expo.io/@tiagoseverino/rescu-app?release-channel=pr-${{ github.event.number }}).
+                msg: App is ready for review, you can [see it here](https://expo.io/@tiagoseverino/rescu-app?release-channel=pr-${{ github.event.number }}).
