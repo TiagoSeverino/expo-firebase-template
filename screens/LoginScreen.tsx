@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { StyleSheet, TouchableOpacity, Text, View } from 'react-native';
 import * as Yup from 'yup';
 
+import i18n from '../components/Translations';
 import Colors from '../utils/colors';
 import SafeView from '../components/SafeView';
 import Form from '../components/Forms/Form';
@@ -14,12 +15,12 @@ import useStatusBar from '../hooks/useStatusBar';
 
 const validationSchema = Yup.object().shape({
 	email: Yup.string()
-		.required('Please enter a registered email')
+		.required(i18n.t('login.registered-email'))
 		.email()
 		.label('Email'),
 	password: Yup.string()
 		.required()
-		.min(6, 'Password must have at least 6 characters')
+		.min(6, i18n.t('register.pass-min', { n: 6 }))
 		.label('Password'),
 });
 
@@ -60,7 +61,7 @@ export default function LoginScreen({ navigation }) {
 				<FormField
 					name="email"
 					leftIcon="email"
-					placeholder="Enter email"
+					placeholder={i18n.t('register.enter-email')}
 					autoCapitalize="none"
 					keyboardType="email-address"
 					textContentType="emailAddress"
@@ -69,7 +70,7 @@ export default function LoginScreen({ navigation }) {
 				<FormField
 					name="password"
 					leftIcon="lock"
-					placeholder="Enter password"
+					placeholder={i18n.t('register.enter-password')}
 					autoCapitalize="none"
 					autoCorrect={false}
 					secureTextEntry={passwordVisibility}
@@ -77,7 +78,7 @@ export default function LoginScreen({ navigation }) {
 					rightIcon={rightIcon}
 					handlePasswordVisibility={handlePasswordVisibility}
 				/>
-				<FormButton title={'Login'} />
+				<FormButton title={i18n.t('welcome.login')} />
 				{<FormErrorMessage error={loginError} visible={true} />}
 			</Form>
 			<View style={styles.footerButtonContainer}>
@@ -85,7 +86,7 @@ export default function LoginScreen({ navigation }) {
 					onPress={() => navigation.navigate('ForgotPassword')}
 				>
 					<Text style={styles.forgotPasswordButtonText}>
-						Forgot Password?
+						{i18n.t('login.forgot-password')}
 					</Text>
 				</TouchableOpacity>
 			</View>

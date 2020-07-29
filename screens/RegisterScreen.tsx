@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { StyleSheet } from 'react-native';
 import * as Yup from 'yup';
 
+
+import i18n from '../components/Translations';
 import Colors from '../utils/colors';
 import SafeView from '../components/SafeView';
 import Form from '../components/Forms/Form';
@@ -15,16 +17,16 @@ import useStatusBar from '../hooks/useStatusBar';
 const validationSchema = Yup.object().shape({
 	name: Yup.string().required().label('Name'),
 	email: Yup.string()
-		.required('Please enter a valid email')
+		.required(i18n.t('register.enter-valid-mail'))
 		.email()
 		.label('Email'),
 	password: Yup.string()
 		.required()
-		.min(6, 'Password must have at least 6 characters')
+		.min(6, i18n.t('register.pass-min', {n: 6}))
 		.label('Password'),
 	confirmPassword: Yup.string()
-		.oneOf([Yup.ref('password')], 'Confirm Password must match Password')
-		.required('Confirm Password is required'),
+		.oneOf([Yup.ref('password')], i18n.t('register.pass-confirm'))
+		.required(i18n.t('register.pass-required')),
 });
 
 export default function RegisterScreen({ navigation }) {
@@ -82,13 +84,13 @@ export default function RegisterScreen({ navigation }) {
 				<FormField
 					name="name"
 					leftIcon="account"
-					placeholder="Enter name"
+					placeholder={i18n.t('register.enter-name')}
 					autoFocus={true}
 				/>
 				<FormField
 					name="email"
 					leftIcon="email"
-					placeholder="Enter email"
+					placeholder={i18n.t('register.enter-email')}
 					autoCapitalize="none"
 					keyboardType="email-address"
 					textContentType="emailAddress"
@@ -96,7 +98,7 @@ export default function RegisterScreen({ navigation }) {
 				<FormField
 					name="password"
 					leftIcon="lock"
-					placeholder="Enter password"
+					placeholder={i18n.t('register.enter-password')}
 					autoCapitalize="none"
 					autoCorrect={false}
 					secureTextEntry={passwordVisibility}
@@ -107,7 +109,7 @@ export default function RegisterScreen({ navigation }) {
 				<FormField
 					name="confirmPassword"
 					leftIcon="lock"
-					placeholder="Confirm password"
+					placeholder={i18n.t('register.confirm-password')}
 					autoCapitalize="none"
 					autoCorrect={false}
 					secureTextEntry={confirmPasswordVisibility}
@@ -115,7 +117,7 @@ export default function RegisterScreen({ navigation }) {
 					rightIcon={confirmPasswordIcon}
 					handlePasswordVisibility={handleConfirmPasswordVisibility}
 				/>
-				<FormButton title={'Register'} />
+				<FormButton title={i18n.t('welcome.register')} />
 				{<FormErrorMessage error={registerError} visible={true} />}
 			</Form>
 			<IconButton

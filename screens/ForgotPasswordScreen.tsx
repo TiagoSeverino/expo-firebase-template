@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { StyleSheet } from 'react-native';
 import * as Yup from 'yup';
 
+import i18n from '../components/Translations';
 import Colors from '../utils/colors';
 import SafeView from '../components/SafeView';
 import Form from '../components/Forms/Form';
@@ -15,8 +16,8 @@ import useStatusBar from '../hooks/useStatusBar';
 const validationSchema = Yup.object().shape({
 	email: Yup.string()
 		.label('Email')
-		.email('Enter a valid email')
-		.required('Please enter a registered email'),
+		.email(i18n.t('register.enter-email'))
+		.required(i18n.t('login.registered-email-email')),
 });
 
 export default function ForgotPasswordScreen({ navigation }) {
@@ -45,13 +46,13 @@ export default function ForgotPasswordScreen({ navigation }) {
 				<FormField
 					name="email"
 					leftIcon="email"
-					placeholder="Enter email"
+					placeholder={i18n.t('register.enter-email')}
 					autoCapitalize="none"
 					keyboardType="email-address"
 					textContentType="emailAddress"
 					autoFocus={true}
 				/>
-				<FormButton title="Forgot Password" />
+				<FormButton title={i18n.t('forgot-password.forgot-password')} />
 				{<FormErrorMessage error={customError} visible={true} />}
 			</Form>
 			<IconButton
