@@ -27,4 +27,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          msg: App is ready for review, you can [see it here](https://expo.io/@tiagoseverino/rescu-app?release-channel=pr-${{ github.event.number }}).
+          msg: App is ready for review, you can [see it here](https://expo.io/@${{ secrets.EXPO_CLI_USERNAME }}/expo-firebase-template?release-channel=pr-${{ github.event.number }}).
