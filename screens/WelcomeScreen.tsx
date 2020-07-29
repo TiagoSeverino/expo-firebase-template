@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, StyleSheet, Text, Image } from 'react-native';
 
+import i18n from '../components/Translations';
 import AppButton from '../components/AppButton';
 import Colors from '../utils/colors';
 import useStatusBar from '../hooks/useStatusBar';
@@ -15,15 +16,15 @@ export default function WelcomeScreen({ navigation }) {
 					source={require('../assets/flame.png')}
 					style={styles.logo}
 				/>
-				<Text style={styles.subtitle}>Expo Firebase Starter</Text>
+				<Text style={styles.subtitle}>{i18n.t('welcome.title')}</Text>
 			</View>
 			<View style={styles.buttonContainer}>
 				<AppButton
-					title="Login"
+					title={i18n.t('welcome.login')}
 					onPress={() => navigation.navigate('Login')}
 				/>
 				<AppButton
-					title="Register"
+					title={i18n.t('welcome.register')}
 					color="secondary"
 					onPress={() => navigation.navigate('Register')}
 				/>
