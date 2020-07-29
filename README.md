@@ -9,37 +9,37 @@
 
 Is a quicker way to start with Expo + Firebase projects. It includes:
 
-- based on Expo SDK `38.x.x`
-- navigation using `react-navigation` 5.x.x
-- Firebase as backend for email auth
-- custom and reusable form components
-- handles different field types in forms
-- handles server errors using Formik
-- Login/Signup form built using Formik & yup
-- show/hide Password Field's visibility 👁
-- uses Context API & checks user's auth state
-- implement Password Reset Screen
-- all components are now functional components and use [React Hooks](https://reactjs.org/docs/hooks-intro.html)
+-   based on Expo SDK `38.x.x`
+-   navigation using `react-navigation` 5.x.x
+-   Firebase as backend for email auth
+-   custom and reusable form components
+-   handles different field types in forms
+-   handles server errors using Formik
+-   Login/Signup form built using Formik & yup
+-   show/hide Password Field's visibility 👁
+-   uses Context API & checks user's auth state
+-   implement Password Reset Screen
+-   all components are now functional components and use [React Hooks](https://reactjs.org/docs/hooks-intro.html)
 
 ## Installation
 
-- Clone this repo
-- to install dependencies: `npm install` or `yarn install`
-- rename the file `example.firebaseConfig.js` to `firebaseConfig.js`
-- and make sure to add your own Firebase config in this file as shown below.
+-   Clone this repo
+-   to install dependencies: `npm install` or `yarn install`
+-   rename the file `example.firebaseConfig.js` to `firebaseConfig.js`
+-   and make sure to add your own Firebase config in this file as shown below.
 
 ```js
 // Rename this file to "firebaeConfig.js" before use
 // Replace all Xs with real Firebase API keys
 
 export default {
-  apiKey: 'XXXX',
-  authDomain: 'XXXX',
-  databaseURL: 'XXXX',
-  projectId: 'XXXX',
-  storageBucket: 'XXXX',
-  messagingSenderId: 'XXXX',
-  appId: 'XXXX'
+	apiKey: 'XXXX',
+	authDomain: 'XXXX',
+	databaseURL: 'XXXX',
+	projectId: 'XXXX',
+	storageBucket: 'XXXX',
+	messagingSenderId: 'XXXX',
+	appId: 'XXXX',
 };
 ```
 
@@ -87,9 +87,9 @@ Expo Firebase Starter
 
 Main screens:
 
-- Login
-- Signup
-- Forgot password
+-   Login
+-   Signup
+-   Forgot password
 
 ![Initial Welcome Screen](https://i.imgur.com/KJAzftx.gif)
 
