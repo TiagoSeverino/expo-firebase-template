@@ -8,6 +8,8 @@ i18n.translations = {
 			title: 'Expo Firebase Starter',
 			login: 'Login',
 			register: 'Register',
+			'fb-login': 'Continue with Facebook',
+			'fb-login-error': 'Unable to login with facebook',
 		},
 		register: {
 			'enter-name': 'Enter name',
@@ -27,13 +29,13 @@ i18n.translations = {
 			'forgot-password': '"Forgot Password"',
 		},
 		home: {
-			"sign-out": "Sign out"
-		}
+			'sign-out': 'Sign out',
+		},
 	},
 };
 // Set the locale once at the beginning of your app.
 i18n.locale = Localization.locale;
 // When a value is missing from a language it'll fallback to another language with the key present.
-i18n.fallbacks = "en";
+i18n.fallbacks = 'en';
 
 export default i18n;

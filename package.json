@@ -15,6 +15,7 @@
     "expo": "^38.0.0",
     "expo-asset": "~8.1.7",
     "expo-constants": "~9.1.1",
+    "expo-facebook": "~8.2.1",
     "expo-font": "~8.2.1",
     "expo-localization": "~8.2.1",
     "expo-updates": "~0.2.8",
