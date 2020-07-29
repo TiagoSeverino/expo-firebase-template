@@ -1,6 +1,8 @@
 import React from 'react';
 import { View, StyleSheet, Text, Image } from 'react-native';
+import { Entypo } from '@expo/vector-icons';
 
+import { loginWithFacebook } from '../components/Firebase/firebase';
 import i18n from '../components/Translations';
 import AppButton from '../components/AppButton';
 import Colors from '../utils/colors';
@@ -8,6 +10,16 @@ import useStatusBar from '../hooks/useStatusBar';
 
 export default function WelcomeScreen({ navigation }) {
 	useStatusBar('light-content');
+
+	async function facebookAuth() {
+		try {
+			await loginWithFacebook();
+		}
+		catch
+		{
+			alert(i18n.t('welcome.fb-login-error'));
+		}
+	}
 
 	return (
 		<View style={styles.container}>
@@ -27,6 +39,16 @@ export default function WelcomeScreen({ navigation }) {
 					title={i18n.t('welcome.register')}
 					color="secondary"
 					onPress={() => navigation.navigate('Register')}
+				/>
+				<AppButton
+					title={
+						<>
+							{i18n.t('welcome.fb-login')}{' '}
+							<Entypo name="facebook" size={18} />
+						</>
+					}
+					color="facebook"
+					onPress={facebookAuth}
 				/>
 			</View>
 		</View>

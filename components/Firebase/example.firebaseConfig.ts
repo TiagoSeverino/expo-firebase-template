@@ -9,4 +9,5 @@ export default {
 	storageBucket: 'XXXX',
 	messagingSenderId: 'XXXX',
 	appId: 'XXXX',
+	facebookAppId: 'XXXX',
 };
