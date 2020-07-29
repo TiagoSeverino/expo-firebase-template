@@ -14,9 +14,7 @@ export default function WelcomeScreen({ navigation }) {
 	async function facebookAuth() {
 		try {
 			await loginWithFacebook();
-		}
-		catch
-		{
+		} catch {
 			alert(i18n.t('welcome.fb-login-error'));
 		}
 	}

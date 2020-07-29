@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { StyleSheet } from 'react-native';
 import * as Yup from 'yup';
 
-
 import i18n from '../components/Translations';
 import Colors from '../utils/colors';
 import SafeView from '../components/SafeView';
@@ -22,7 +21,7 @@ const validationSchema = Yup.object().shape({
 		.label('Email'),
 	password: Yup.string()
 		.required()
-		.min(6, i18n.t('register.pass-min', {n: 6}))
+		.min(6, i18n.t('register.pass-min', { n: 6 }))
 		.label('Password'),
 	confirmPassword: Yup.string()
 		.oneOf([Yup.ref('password')], i18n.t('register.pass-confirm'))
