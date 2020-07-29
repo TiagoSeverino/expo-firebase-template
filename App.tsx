@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect } from "react";
 import Updates from 'expo-updates';
 
 import Providers from './navigation';
