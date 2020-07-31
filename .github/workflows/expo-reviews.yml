@@ -1,5 +1,8 @@
 name: Expo Review
-on: [pull_request]
+on:
+  push:
+    branches:
+      - 'features/*'
 jobs:
   publish:
     name: Install and publish
