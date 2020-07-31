@@ -4,6 +4,7 @@ on:
     branches:
       - 'features/*'
       - 'dependabot/*'
+      - 'renovate/*'
 jobs:
   publish:
     name: Install and publish
