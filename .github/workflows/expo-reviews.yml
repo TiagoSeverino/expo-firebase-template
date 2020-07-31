@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - 'features/*'
+      - 'dependabot/*'
 jobs:
   publish:
     name: Install and publish
