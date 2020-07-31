@@ -18,6 +18,7 @@
     "expo-facebook": "~8.2.1",
     "expo-font": "~8.2.1",
     "expo-localization": "~8.2.1",
+    "expo-notifications": "~0.3.3",
     "expo-updates": "~0.2.8",
     "firebase": "7.9.0",
     "formik": "2.1.4",
