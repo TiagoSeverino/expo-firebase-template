@@ -20,7 +20,7 @@
     "expo-localization": "~8.2.1",
     "expo-updates": "~0.2.8",
     "firebase": "7.9.0",
-    "formik": "2.1.4",
+    "formik": "2.1.5",
     "i18n-js": "^3.7.1",
     "react": "16.11.0",
     "react-dom": "16.11.0",
