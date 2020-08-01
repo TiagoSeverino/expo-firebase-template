@@ -1,6 +1,6 @@
 name: Expo Review
 on:
-  push:
+  pull_request:
     branches:
       - 'features/*'
       - 'dependabot/*'
