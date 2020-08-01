@@ -19,7 +19,7 @@
     "expo-font": "~8.2.1",
     "expo-localization": "~8.2.1",
     "expo-updates": "~0.2.8",
-    "firebase": "7.9.0",
+    "firebase": "7.17.1",
     "formik": "2.1.5",
     "i18n-js": "^3.7.1",
     "react": "16.11.0",
