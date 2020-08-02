@@ -14,7 +14,7 @@ jobs:
         with:
           file-url: ${{ secrets.FIREBASE_CONFIG_URL }}
           file-name: 'firebaseConfig.ts'
-          location: './components/Firebase'
+          location: './src/services/Firebase'
       - uses: expo/expo-github-action@v5
         with:
           expo-version: 3.x
