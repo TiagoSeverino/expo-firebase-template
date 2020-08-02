@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { View, StyleSheet, Button, Text, Platform } from 'react-native';
+import React, { useState, useEffect, useContext } from 'react';
+import { View, StyleSheet, Button, Text, Image } from 'react-native';
 
 import {
 	registerForPushNotificationsAsync,
@@ -8,11 +8,13 @@ import {
 import i18n from '../../services/Translations';
 import useStatusBar from '../../hooks/useStatusBar';
 import { logout } from '../../services/Firebase/firebase';
+import { AuthUserContext } from '../AuthUserProvider';
 
 export default function HomeScreen() {
 	useStatusBar('dark-content');
 
 	const [expoPushToken, setExpoPushToken] = useState('');
+	const { user } = useContext(AuthUserContext);
 
 	useEffect(() => {
 		registerForPushNotificationsAsync().then((token) => {
@@ -27,8 +29,11 @@ export default function HomeScreen() {
 			console.log(error);
 		}
 	}
+
 	return (
 		<View style={styles.container}>
+			<Image style={styles.avatar} source={{ uri: user?.photoURL }} />
+			<Text>Welcome {user?.displayName}</Text>
 			<Text>Your expo push token: {expoPushToken}</Text>
 			<Button
 				title={'Send Push Notification'}
@@ -50,5 +55,9 @@ export default function HomeScreen() {
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
+	},
+	avatar: {
+		width: 80,
+		height: 80,
 	},
 });
