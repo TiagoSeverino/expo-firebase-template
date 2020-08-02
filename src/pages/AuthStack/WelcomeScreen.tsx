@@ -2,11 +2,11 @@ import React from 'react';
 import { View, StyleSheet, Text, Image } from 'react-native';
 import { Entypo } from '@expo/vector-icons';
 
-import { loginWithFacebook } from '../components/Firebase/firebase';
-import i18n from '../components/Translations';
-import AppButton from '../components/AppButton';
-import Colors from '../utils/colors';
-import useStatusBar from '../hooks/useStatusBar';
+import { loginWithFacebook } from '../../services/Firebase/firebase';
+import i18n from '../../services/Translations';
+import AppButton from '../../components/AppButton';
+import Colors from '../../utils/colors';
+import useStatusBar from '../../hooks/useStatusBar';
 
 export default function WelcomeScreen({ navigation }) {
 	useStatusBar('light-content');
@@ -23,7 +23,7 @@ export default function WelcomeScreen({ navigation }) {
 		<View style={styles.container}>
 			<View style={styles.logoContainer}>
 				<Image
-					source={require('../assets/flame.png')}
+					source={require('../../../assets/flame.png')}
 					style={styles.logo}
 				/>
 				<Text style={styles.subtitle}>{i18n.t('welcome.title')}</Text>

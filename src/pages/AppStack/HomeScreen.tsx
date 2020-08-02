@@ -4,10 +4,10 @@ import { View, StyleSheet, Button, Text, Platform } from 'react-native';
 import {
 	registerForPushNotificationsAsync,
 	sendPushNotification,
-} from '../components/Notifications';
-import i18n from '../components/Translations';
-import useStatusBar from '../hooks/useStatusBar';
-import { logout } from '../components/Firebase/firebase';
+} from '../../services/Notifications';
+import i18n from '../../services/Translations';
+import useStatusBar from '../../hooks/useStatusBar';
+import { logout } from '../../services/Firebase/firebase';
 
 export default function HomeScreen() {
 	useStatusBar('dark-content');
