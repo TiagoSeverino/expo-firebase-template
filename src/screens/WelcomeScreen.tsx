@@ -23,7 +23,7 @@ export default function WelcomeScreen({ navigation }) {
 		<View style={styles.container}>
 			<View style={styles.logoContainer}>
 				<Image
-					source={require('../assets/flame.png')}
+					source={require('../../assets/flame.png')}
 					style={styles.logo}
 				/>
 				<Text style={styles.subtitle}>{i18n.t('welcome.title')}</Text>

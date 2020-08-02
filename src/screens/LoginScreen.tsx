@@ -35,9 +35,11 @@ export default function LoginScreen({ navigation }) {
 		if (rightIcon === 'eye') {
 			setRightIcon('eye-off');
 			setPasswordVisibility(!passwordVisibility);
+			console.log('eye-off');
 		} else if (rightIcon === 'eye-off') {
 			setRightIcon('eye');
 			setPasswordVisibility(!passwordVisibility);
+			console.log('eye-on');
 		}
 	}
 
