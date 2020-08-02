@@ -1,10 +1,5 @@
 name: Expo Review
-on:
-  push:
-    branches:
-      - 'features/*'
-      - 'dependabot/*'
-      - 'renovate/*'
+on: [pull_request]
 jobs:
   publish:
     name: Install and publish
