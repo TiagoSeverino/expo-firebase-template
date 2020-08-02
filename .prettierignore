@@ -7,3 +7,5 @@ yarn.lock
 
 .gitignore
 .editorconfig
+
+*.md
