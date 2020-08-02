@@ -1,10 +1,5 @@
 name: Lint
-
-on:
-  push:
-    branches:
-      - 'features/*'
-
+on: [pull_request]
 jobs:
     run-linters:
         name: Run linters
