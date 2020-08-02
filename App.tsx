@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import Updates from 'expo-updates';
 
-import Providers from './src/navigation';
+import Providers from './src/pages';
 
 export default function App() {
 	useEffect(() => {

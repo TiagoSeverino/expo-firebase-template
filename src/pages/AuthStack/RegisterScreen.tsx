@@ -2,16 +2,16 @@ import React, { useState } from 'react';
 import { StyleSheet } from 'react-native';
 import * as Yup from 'yup';
 
-import i18n from '../components/Translations';
-import Colors from '../utils/colors';
-import SafeView from '../components/SafeView';
-import Form from '../components/Forms/Form';
-import FormField from '../components/Forms/FormField';
-import FormButton from '../components/Forms/FormButton';
-import IconButton from '../components/IconButton';
-import FormErrorMessage from '../components/Forms/FormErrorMessage';
-import { registerWithEmail } from '../components/Firebase/firebase';
-import useStatusBar from '../hooks/useStatusBar';
+import i18n from '../../services/Translations';
+import Colors from '../../utils/colors';
+import SafeView from '../../components/SafeView';
+import Form from '../../components/Forms/Form';
+import FormField from '../../components/Forms/FormField';
+import FormButton from '../../components/Forms/FormButton';
+import IconButton from '../../components/IconButton';
+import FormErrorMessage from '../../components/Forms/FormErrorMessage';
+import { registerWithEmail } from '../../services/Firebase/firebase';
+import useStatusBar from '../../hooks/useStatusBar';
 
 const validationSchema = Yup.object().shape({
 	name: Yup.string().required().label('Name'),

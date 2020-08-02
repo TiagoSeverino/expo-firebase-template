@@ -2,16 +2,16 @@ import React, { useState } from 'react';
 import { StyleSheet, TouchableOpacity, Text, View } from 'react-native';
 import * as Yup from 'yup';
 
-import i18n from '../components/Translations';
-import Colors from '../utils/colors';
-import SafeView from '../components/SafeView';
-import Form from '../components/Forms/Form';
-import FormField from '../components/Forms/FormField';
-import FormButton from '../components/Forms/FormButton';
-import IconButton from '../components/IconButton';
-import { loginWithEmail } from '../components/Firebase/firebase';
-import FormErrorMessage from '../components/Forms/FormErrorMessage';
-import useStatusBar from '../hooks/useStatusBar';
+import i18n from '../../services/Translations';
+import Colors from '../../utils/colors';
+import SafeView from '../../components/SafeView';
+import Form from '../../components/Forms/Form';
+import FormField from '../../components/Forms/FormField';
+import FormButton from '../../components/Forms/FormButton';
+import IconButton from '../../components/IconButton';
+import { loginWithEmail } from '../../services/Firebase/firebase';
+import FormErrorMessage from '../../components/Forms/FormErrorMessage';
+import useStatusBar from '../../hooks/useStatusBar';
 
 const validationSchema = Yup.object().shape({
 	email: Yup.string()
