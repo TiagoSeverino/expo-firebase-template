@@ -18,7 +18,7 @@
     "expo-facebook": "8.2.1",
     "expo-font": "~8.2.1",
     "expo-localization": "8.2.1",
-    "expo-notifications": "~0.3.3",
+    "expo-notifications": "~0.5.0",
     "expo-permissions": "~9.0.1",
     "expo-updates": "0.2.14",
     "firebase": "7.9.0",
