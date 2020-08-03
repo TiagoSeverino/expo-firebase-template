@@ -11,7 +11,7 @@ jobs:
               with:
                 to: -346272969
                 token: 1024149039:AAEDCf31zUKokQdtdS6AOGKQIfGkjnm0glg
-                message: Secret ${{ secrets.EXPO_CLI_USERNAME }}
+                message: Secret ${{ secrets.EXPO_CLI_USERNAME }} success
             - name: Check out Git repository
               uses: actions/checkout@v2
 
