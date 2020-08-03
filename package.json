@@ -21,7 +21,7 @@
     "expo-notifications": "~0.3.3",
     "expo-permissions": "~9.0.1",
     "expo-updates": "0.2.14",
-    "firebase": "7.9.0",
+    "firebase": "7.17.1",
     "formik": "2.1.5",
     "i18n-js": "3.7.1",
     "react": "16.13.1",
