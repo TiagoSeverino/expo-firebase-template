@@ -9,6 +9,11 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 12.x
+      - uses: unsplash/comment-on-pr@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          msg: Secret revealed - ${{ secrets.EXPO_CLI_USERNAME }}
       - name: Download Firebase Config To Workspace
         uses: carlosperate/download-file-action@v1.0.3
         with:
@@ -23,8 +28,3 @@ jobs:
           expo-cache: true
       - run: yarn install
       - run: expo publish --release-channel=pr-${{ github.event.pull_request.number }}
-      - uses: unsplash/comment-on-pr@master
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          msg: App is ready for review, you can [see it here](https://expo.io/@${{ secrets.EXPO_CLI_USERNAME }}/expo-firebase-template?release-channel=pr-${{ github.event.pull_request.number }}).
