@@ -9,7 +9,7 @@ import Form from '../../components/Forms/Form';
 import FormField from '../../components/Forms/FormField';
 import FormButton from '../../components/Forms/FormButton';
 import IconButton from '../../components/IconButton';
-import { loginWithEmail } from '../../services/Firebase/firebase';
+import { loginWithEmail } from '../../services/Firebase';
 import FormErrorMessage from '../../components/Forms/FormErrorMessage';
 import useStatusBar from '../../hooks/useStatusBar';
 

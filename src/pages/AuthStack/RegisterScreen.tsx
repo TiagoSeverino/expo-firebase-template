@@ -10,7 +10,7 @@ import FormField from '../../components/Forms/FormField';
 import FormButton from '../../components/Forms/FormButton';
 import IconButton from '../../components/IconButton';
 import FormErrorMessage from '../../components/Forms/FormErrorMessage';
-import { registerWithEmail } from '../../services/Firebase/firebase';
+import { registerWithEmail } from '../../services/Firebase';
 import useStatusBar from '../../hooks/useStatusBar';
 
 const validationSchema = Yup.object().shape({

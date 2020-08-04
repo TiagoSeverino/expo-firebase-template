@@ -7,7 +7,7 @@ import {
 } from '../../services/Notifications';
 import i18n from '../../services/Translations';
 import useStatusBar from '../../hooks/useStatusBar';
-import { logout } from '../../services/Firebase/firebase';
+import { logout } from '../../services/Firebase';
 import { AuthUserContext } from '../AuthUserProvider';
 
 export default function HomeScreen() {

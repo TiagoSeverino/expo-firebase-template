@@ -2,7 +2,7 @@ import React from 'react';
 import { View, StyleSheet, Text, Image } from 'react-native';
 import { Entypo } from '@expo/vector-icons';
 
-import { loginWithFacebook } from '../../services/Firebase/firebase';
+import { loginWithFacebook } from '../../services/Firebase';
 import i18n from '../../services/Translations';
 import AppButton from '../../components/AppButton';
 import Colors from '../../utils/colors';
