@@ -2276,29 +2276,14 @@
     "@types/react" "*"
     "@types/react-native" "*"
 
-"@types/react-native@*":
-  version "0.62.13"
-  resolved "https://registry.yarnpkg.com/@types/react-native/-/react-native-0.62.13.tgz#c688c5ae03e426f927f7e1fa1a59cd067f35d1c2"
-  integrity sha512-hs4/tSABhcJx+J8pZhVoXHrOQD89WFmbs8QiDLNSA9zNrD46pityAuBWuwk1aMjPk9I3vC5ewkJroVRHgRIfdg==
+"@types/react-native@*", "@types/react-native@0.63.4":
+  version "0.63.4"
+  resolved "https://registry.yarnpkg.com/@types/react-native/-/react-native-0.63.4.tgz#4610b0df0e5f0db4c68d495754ad9f8bc3b8893f"
+  integrity sha512-IkQax0q5z5P4ttScELhrfrXtnFuADs/SP9kNwx2rfEuVjwF5xqhGjcY/YkiH2mSx+9QjI5S4zhxXOi3+kcnOkw==
   dependencies:
     "@types/react" "*"
 
-"@types/react-native@0.63.2":
-  version "0.63.2"
-  resolved "https://registry.yarnpkg.com/@types/react-native/-/react-native-0.63.2.tgz#428a4d71351ccbc31ab170b5f32477c7ce78dfd7"
-  integrity sha512-oxbp084lUsZvwfdWmWxKjJAuqEraQDRf+cE/JgwmrHQMguSrmgIHZ3xkeoQ5FYnW5NHIPpHudB3BbjL1Zn3vnA==
-  dependencies:
-    "@types/react" "*"
-
-"@types/react@*":
-  version "16.9.38"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.9.38.tgz#868405dace93a4095d3e054f4c4a1de7a1ac0680"
-  integrity sha512-pHAeZbjjNRa/hxyNuLrvbxhhnKyKNiLC6I5fRF2Zr/t/S6zS41MiyzH4+c+1I9vVfvuRt1VS2Lodjr4ZWnxrdA==
-  dependencies:
-    "@types/prop-types" "*"
-    csstype "^2.2.0"
-
-"@types/react@16.9.44":
+"@types/react@*", "@types/react@16.9.44":
   version "16.9.44"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-16.9.44.tgz#da84b179c031aef67dc92c33bd3401f1da2fa3bc"
   integrity sha512-BtLoJrXdW8DVZauKP+bY4Kmiq7ubcJq+H/aCpRfvPF7RAT3RwR73Sg8szdc2YasbAlWBDrQ6Q+AFM0KwtQY+WQ==
@@ -3214,11 +3199,6 @@ css-in-js-utils@^2.0.0:
   dependencies:
     hyphenate-style-name "^1.0.2"
     isobject "^3.0.1"
-
-csstype@^2.2.0:
-  version "2.6.10"
-  resolved "https://registry.yarnpkg.com/csstype/-/csstype-2.6.10.tgz#e63af50e66d7c266edb6b32909cfd0aabe03928b"
-  integrity sha512-D34BqZU4cIlMCY93rZHbrq9pjTAQJ3U8S8rfBqjwHxkGPThWFjzZDQpgMJY0QViLxth6ZKYiwFBo14RdN44U/w==
 
 csstype@^3.0.2:
   version "3.0.2"
