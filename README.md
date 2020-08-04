@@ -29,22 +29,24 @@ Is a quicker way to start with Expo + Firebase projects. It includes:
 
 -   Clone this repo
 -   Install dependencies: `npm install` or `yarn install`
--   Rename the file `example.firebaseConfig.js` to `firebaseConfig.js`
--   Make sure to add your own Firebase config in this file as shown below.
+-   Rename the file `config.example.ts` to `config.ts`
+-   Make sure to add your own config in this file as shown below.
 
 ```js
-// Rename this file to "firebaeConfig.js" before use
-// Replace all Xs with real Firebase API keys
+// Rename this file to "config.ts" before use
 
 export default {
-	apiKey: 'XXXX',
-	authDomain: 'XXXX',
-	databaseURL: 'XXXX',
-	projectId: 'XXXX',
-	storageBucket: 'XXXX',
-	messagingSenderId: 'XXXX',
-	appId: 'XXXX',
-	facebookAppId: 'XXXX',
+	// Replace all XXXXs with real Firebase API keys
+	firebase: {
+		apiKey: 'XXXX',
+		authDomain: 'XXXX',
+		databaseURL: 'XXXX',
+		projectId: 'XXXX',
+		storageBucket: 'XXXX',
+		messagingSenderId: 'XXXX',
+		appId: 'XXXX',
+		facebookAppId: 'XXXX',
+	},
 };
 ```
 
