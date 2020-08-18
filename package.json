@@ -33,7 +33,7 @@
     "react-native-reanimated": "~1.9.0",
     "react-native-safe-area-context": "~3.0.7",
     "react-native-screens": "2.9.0",
-    "react-native-web": "0.13.5",
+    "react-native-web": "0.13.8",
     "yup": "0.29.2"
   },
   "devDependencies": {

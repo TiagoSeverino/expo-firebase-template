@@ -5997,10 +5997,10 @@ react-native-status-bar-height@^2.5.0:
   resolved "https://registry.yarnpkg.com/react-native-status-bar-height/-/react-native-status-bar-height-2.5.0.tgz#bc0fb85230603850aab9667ee8111a62954de90c"
   integrity sha512-sYBCPYA/NapBSHkdm/IVL4ID3LLlIuLqINi2FBDyMkc2BU9pfSGOtkz9yfxoK39mYJuTrlTOQ7mManARUsYDSA==
 
-react-native-web@0.13.5:
-  version "0.13.5"
-  resolved "https://registry.yarnpkg.com/react-native-web/-/react-native-web-0.13.5.tgz#b8edeb26149fe1d986c34f488fa1562865e15f7b"
-  integrity sha512-Z4hiqKZ0bFFVMlsc/6gQMkIiGYPrY8bH6SFpLrLljDGLousNZjD+H4hV7QQz72smo8786994UJEBC0bU+0kAMw==
+react-native-web@0.13.8:
+  version "0.13.8"
+  resolved "https://registry.yarnpkg.com/react-native-web/-/react-native-web-0.13.8.tgz#2c62425c88d56d7061e847ec27b81d54365ab4d8"
+  integrity sha512-xTJUFN9N+hFzdRrCwucMi+kBldKXmGGbsgjKLsbhyWUeXxZypXDUy7r3D6t2EUoFq/U3OJzSx/QY4RdudsRt7Q==
   dependencies:
     array-find-index "^1.0.2"
     create-react-class "^15.6.2"
