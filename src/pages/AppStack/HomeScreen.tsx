@@ -21,10 +21,11 @@ import { AuthUserContext } from '../AuthUserProvider';
 export default function HomeScreen() {
 	useStatusBar('dark-content');
 
-	console.log('refresh');
-
 	const [expoPushToken, setExpoPushToken] = useState('');
 	const { user, setUser } = useContext(AuthUserContext);
+
+	const [, updateState] = React.useState();
+	const forceUpdate = React.useCallback(() => updateState({}), []);
 
 	useEffect(() => {
 		registerForPushNotificationsAsync().then((token) => {
@@ -70,7 +71,7 @@ export default function HomeScreen() {
 
 				uploadAvatar(blob, result.uri, (new_user) => {
 					setUser(new_user);
-					console.log(new_user);
+					forceUpdate();
 				});
 			}
 		} catch {}
