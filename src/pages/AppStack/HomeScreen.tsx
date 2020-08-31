@@ -7,7 +7,7 @@ import {
 } from '../../services/Notifications';
 import i18n from '../../services/Translations';
 import useStatusBar from '../../hooks/useStatusBar';
-import { logout } from '../../services/Firebase';
+import { logout, saveExpoPushToken } from '../../services/Firebase';
 import { AuthUserContext } from '../AuthUserProvider';
 
 export default function HomeScreen() {
@@ -19,6 +19,7 @@ export default function HomeScreen() {
 	useEffect(() => {
 		registerForPushNotificationsAsync().then((token) => {
 			setExpoPushToken(token);
+			saveExpoPushToken(token);
 		});
 	}, []);
 
