@@ -30,7 +30,7 @@ i18n.translations = {
 		},
 		home: {
 			'sign-out': 'Sign out',
-			'upload-avatar': 'Upload Avatar'
+			'upload-avatar': 'Upload Avatar',
 		},
 	},
 };
