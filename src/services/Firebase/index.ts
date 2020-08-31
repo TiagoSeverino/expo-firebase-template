@@ -1,7 +1,9 @@
 import * as firebase from 'firebase';
 import 'firebase/auth';
 import 'firebase/firestore';
+import 'firebase/storage';
 import * as Facebook from 'expo-facebook';
+import { extname } from 'path';
 
 import firebaseConfig from './firebaseConfig';
 
@@ -57,6 +59,61 @@ export const saveExpoPushToken = (token: string | undefined) => {
 					});
 			}
 		});
+};
+
+export const uploadAvatar = (
+	file: Blob,
+	fileName: string,
+	cb: (user: any) => void
+) => {
+	// Create a Storage Ref w/ username
+	const storageRef = firebase
+		.storage()
+		.ref('avatar/' + auth.currentUser?.uid + extname(fileName));
+
+	// Upload file
+	const task = storageRef.put(file, {
+		cacheControl: 'public,max-age=86400',
+	});
+
+	// Register three observers:
+	// 1. 'state_changed' observer, called any time the state changes
+	// 2. Error observer, called on failure
+	// 3. Completion observer, called on successful completion
+	task.on(
+		'state_changed',
+		(snapshot) => {
+			// Observe state change events such as progress, pause, and resume
+			// Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
+			var progress =
+				(snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+			console.log('Upload is ' + progress + '% done');
+			switch (snapshot.state) {
+				case firebase.storage.TaskState.PAUSED: // or 'paused'
+					console.log('Upload is paused');
+					break;
+				case firebase.storage.TaskState.RUNNING: // or 'running'
+					console.log('Upload is running');
+					break;
+			}
+		},
+		(error) => {
+			// Handle unsuccessful uploads
+		},
+		() => {
+			// Handle successful uploads on complete
+			// For instance, get the download URL: https://firebasestorage.googleapis.com/...
+			task.snapshot.ref.getDownloadURL().then(function (downloadURL) {
+				auth.currentUser
+					?.updateProfile({
+						photoURL: downloadURL,
+					})
+					.then(() => {
+						if (auth.currentUser) cb(auth.currentUser);
+					});
+			});
+		}
+	);
 };
 
 interface priv {
