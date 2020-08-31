@@ -64,7 +64,7 @@ export const saveExpoPushToken = (token: string | undefined) => {
 export const uploadAvatar = (
 	file: Blob,
 	fileName: string,
-	cb: (user: any) => void
+	cb: (user: firebase.User) => void
 ) => {
 	// Create a Storage Ref w/ username
 	const storageRef = firebase
