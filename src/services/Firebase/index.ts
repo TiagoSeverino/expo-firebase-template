@@ -47,7 +47,7 @@ export const saveExpoPushToken = (token: string | undefined) => {
 		.get()
 		.then((doc) => {
 			if (!doc.exists || !doc.data()?.ExpoPushToken?.includes(token)) {
-				db.collection('public')
+				db.collection('private')
 					.doc(auth.currentUser?.uid)
 					.set({
 						ExpoPushToken: [
