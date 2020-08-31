@@ -11,7 +11,7 @@
     "@react-native-community/masked-view": "0.1.10",
     "@react-navigation/native": "5.7.3",
     "@react-navigation/stack": "5.9.0",
-    "@types/yup": "0.29.4",
+    "@types/yup": "0.29.6",
     "expo": "38.0.9",
     "expo-asset": "8.1.7",
     "expo-constants": "9.1.1",
