@@ -26,10 +26,11 @@ i18n.translations = {
 			'forgot-password': 'Forgot Password?',
 		},
 		'forgot-password': {
-			'forgot-password': '"Forgot Password"',
+			'forgot-password': 'Forgot Password',
 		},
 		home: {
 			'sign-out': 'Sign out',
+			'upload-avatar': 'Upload Avatar',
 		},
 	},
 };
