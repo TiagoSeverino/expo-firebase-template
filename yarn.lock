@@ -3276,10 +3276,15 @@ deepmerge@^2.1.1:
   resolved "https://registry.yarnpkg.com/deepmerge/-/deepmerge-2.2.1.tgz#5d3ff22a01c00f645405a2fbc17d0778a1801170"
   integrity sha512-R9hc1Xa/NOBi9WRVUWg19rl1UB7Tt4kuPd+thNJgFZoxXsTz7ncaPaeIm+40oSGuP33DfMb4sZt1QIGiJzC4EA==
 
-deepmerge@^3.1.0, deepmerge@^3.2.0:
+deepmerge@^3.2.0:
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/deepmerge/-/deepmerge-3.3.0.tgz#d3c47fd6f3a93d517b14426b0628a17b0125f5f7"
   integrity sha512-GRQOafGHwMHpjPx9iCvTgpu9NojZ49q794EEL94JVEw6VaeA8XTUyBKvAkOOjBX9oJNiV6G3P+T+tihFjo2TqA==
+
+deepmerge@^4.2.2:
+  version "4.2.2"
+  resolved "https://registry.yarnpkg.com/deepmerge/-/deepmerge-4.2.2.tgz#44d2ea3679b8f4d4ffba33f03d865fc1e7bf4955"
+  integrity sha512-FJ3UgI4gIl+PHZm53knsuSFpE+nESMr7M4v9QcgB7S63Kj/6WqMiFQJpBBYz1Pt+66bZpP3Q7Lye0Oo9MPKEdg==
 
 defaults@^1.0.3:
   version "1.0.3"
@@ -5925,14 +5930,14 @@ react-native-appearance@~0.3.3:
     invariant "^2.2.4"
     use-subscription "^1.0.0"
 
-react-native-elements@2.2.1:
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/react-native-elements/-/react-native-elements-2.2.1.tgz#1d95aa7ee2020f72e0bc779d574fefcf072b7086"
-  integrity sha512-JhveP4ZQzZrMef9sBJfjfgfdbKafGnqZGosVr4hb3At8c1wJ3QFgOGUsKxhpjpF2wr/RgLbP2UV3rS1cD+t7IA==
+react-native-elements@2.3.1:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/react-native-elements/-/react-native-elements-2.3.1.tgz#7dda54105deb13927bb294fe78059aaf85429992"
+  integrity sha512-eoEXVbBIvxqh+xuOEyu6EOZTOgBpNEgrZkB39TjApOFiH4fCTyYV9uFZ3nwBsuIpL5H0C3JiVh7MW4jfBkND/g==
   dependencies:
     "@types/react-native-vector-icons" "^6.4.5"
     color "^3.1.0"
-    deepmerge "^3.1.0"
+    deepmerge "^4.2.2"
     hoist-non-react-statics "^3.1.0"
     lodash.isequal "^4.5.0"
     opencollective-postinstall "^2.0.0"
