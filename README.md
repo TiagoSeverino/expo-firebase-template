@@ -50,20 +50,16 @@ export default {
 };
 ```
 
-## Screens
+### Github Actions Secrets
 
-Main screens:
+Here is a summary of all the variables that you can use and their purpose.
 
--   Login
--   Signup
--   Forgot password
+variable              | description
+---                   | ---
+`EXPO_CLI_USERNAME`   | The username of your Expo account
+`EXPO_CLI_PASSWORD`   | The password of your Expo account
+`CONFIG_URL`          | The url to your production config.ts
 
-![Initial Welcome Screen](https://i.imgur.com/KJAzftx.gif)
 
-![Successful Signup](https://i.imgur.com/Ih72jol.gif)
-
-![Successful Login](https://i.imgur.com/Xp0tiI1.gif)
-
-![Forgot Password](https://i.imgur.com/HDvQMfp.png)
 
 <strong>Built by [@TiagoSeverino](https://github.com/TiagoSeverino)</strong>
