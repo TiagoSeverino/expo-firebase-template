@@ -17,10 +17,14 @@
 		},
 		"assetBundlePatterns": ["**/*"],
 		"ios": {
-			"supportsTablet": true
+			"supportsTablet": true,
+			"bundleIdentifier": "com.yourcompany.yourappname",
+			"buildNumber": "1.0.0"
 		},
 		"android": {
-			"useNextNotificationsApi": true
+			"useNextNotificationsApi": true,
+			"package": "com.tiagoseverino.firebasetemplate",
+			"versionCode": 1
 		}
 	}
 }
