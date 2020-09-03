@@ -32,8 +32,17 @@ export const loginWithFacebook = async () => {
 	return auth.signInWithCredential(credential);
 };
 
-export const registerWithEmail = (email: string, password: string) =>
-	auth.createUserWithEmailAndPassword(email, password);
+export const registerWithEmail = (
+	name: string,
+	email: string,
+	password: string
+) =>
+	auth.createUserWithEmailAndPassword(email, password).then(({ user }) => {
+		if (user)
+			user.updateProfile({
+				displayName: name,
+			});
+	});
 
 export const logout = () => auth.signOut();
 
