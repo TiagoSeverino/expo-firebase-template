@@ -33,6 +33,7 @@ Is a quicker way to start with Expo + Firebase projects. It includes:
 
 -   Clone this repo
 -   Install dependencies: `npm install` or `yarn install`
+-   Copy [google-services.json](https://docs.expo.io/push-notifications/using-fcm/) file to your project folder
 -   Rename the file `config.example.ts` to `config.ts`
 -   Make sure to add your own config in this file as shown below.
 
@@ -62,8 +63,8 @@ variable              | description
 ---                   | ---
 `EXPO_CLI_USERNAME`   | The username of your Expo account
 `EXPO_CLI_PASSWORD`   | The password of your Expo account
-`CONFIG_URL`          | The url to your production config.ts
-
+`CONFIG_URL`          | The url of your config.ts
+`GOOGLE_SERVICES`     | The url of your google-services.json
 
 
 <strong>Built by [@TiagoSeverino](https://github.com/TiagoSeverino)</strong>
