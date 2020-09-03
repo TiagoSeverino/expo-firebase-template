@@ -23,7 +23,7 @@ jobs:
         with:
           file-url: ${{ secrets.GOOGLE_SERVICES }}
           file-name: 'google-services.json'
-			    location: './'
+          location: './'
       - uses: expo/expo-github-action@v5
         with:
           expo-version: 3.x
