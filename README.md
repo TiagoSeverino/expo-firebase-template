@@ -1,6 +1,10 @@
 # expo-firebase-template 🔥
 
 ![Expo Publish](https://github.com/TiagoSeverino/expo-firebase-template/workflows/Expo%20Publish/badge.svg?branch=master)
+[![GitHub issues](https://img.shields.io/github/issues/TiagoSeverino/expo-firebase-template)](https://github.com/TiagoSeverino/expo-firebase-template/issues)
+[![GitHub forks](https://img.shields.io/github/forks/TiagoSeverino/expo-firebase-template)](https://github.com/TiagoSeverino/expo-firebase-template/network)
+[![GitHub stars](https://img.shields.io/github/stars/TiagoSeverino/expo-firebase-template)](https://github.com/TiagoSeverino/expo-firebase-template/stargazers)
+
 <p>
   <!-- iOS -->
   <img alt="Supports Expo iOS" longdesc="Supports Expo iOS" src="https://img.shields.io/badge/iOS-4630EB.svg?style=flat-square&logo=APPLE&labelColor=999999&logoColor=fff" />
