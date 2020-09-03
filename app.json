@@ -18,13 +18,14 @@
 		"assetBundlePatterns": ["**/*"],
 		"ios": {
 			"supportsTablet": true,
-			"bundleIdentifier": "com.yourcompany.yourappname",
+			"bundleIdentifier": "com.tiagoseverino.firebasetemplate",
 			"buildNumber": "1.0.0"
 		},
 		"android": {
 			"useNextNotificationsApi": true,
 			"package": "com.tiagoseverino.firebasetemplate",
-			"versionCode": 1
+			"versionCode": 1,
+			"googleServicesFile": "./google-services.json"
 		}
 	}
 }
