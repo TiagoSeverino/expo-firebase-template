@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { View, StyleSheet, Button, Text, Image } from 'react-native';
+import { View, StyleSheet, Button, Text } from 'react-native';
+import { Avatar } from 'react-native-elements';
 
 import * as ImagePicker from 'expo-image-picker';
 import Constants from 'expo-constants';
@@ -81,8 +82,9 @@ export default function HomeScreen() {
 
 	return (
 		<View style={styles.container}>
-			<Image
-				style={styles.avatar}
+			<Avatar
+				rounded
+				size="large"
 				source={{
 					uri:
 						user?.photoURL ??

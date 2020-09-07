@@ -1,5 +1,6 @@
-import React, { useState, useEffect, useContext } from 'react';
-import { View, StyleSheet, Button, Text, Image } from 'react-native';
+import React, { useContext } from 'react';
+import { View, StyleSheet, Text } from 'react-native';
+import { Avatar } from 'react-native-elements';
 
 import i18n from '../../../services/Translations';
 import useStatusBar from '../../../hooks/useStatusBar';
@@ -12,8 +13,9 @@ export default function HomeScreen() {
 
 	return (
 		<View style={styles.container}>
-			<Image
-				style={styles.avatar}
+			<Avatar
+				rounded
+				size="large"
 				source={{
 					uri:
 						user?.photoURL ??
