@@ -8,15 +8,15 @@ import * as Permissions from 'expo-permissions';
 import {
 	registerForPushNotificationsAsync,
 	sendPushNotification,
-} from '../../services/Notifications';
-import i18n from '../../services/Translations';
-import useStatusBar from '../../hooks/useStatusBar';
+} from '../../../services/Notifications';
+import i18n from '../../../services/Translations';
+import useStatusBar from '../../../hooks/useStatusBar';
 import {
 	logout,
 	saveExpoPushToken,
 	uploadAvatar,
-} from '../../services/Firebase';
-import { AuthUserContext } from '../AuthUserProvider';
+} from '../../../services/Firebase';
+import { AuthUserContext } from '../../AuthUserProvider';
 
 export default function HomeScreen() {
 	useStatusBar('dark-content');
