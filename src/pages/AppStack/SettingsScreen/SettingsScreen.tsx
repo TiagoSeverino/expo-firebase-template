@@ -1,6 +1,13 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { View, StyleSheet, Button, Text } from 'react-native';
-import { Avatar } from 'react-native-elements';
+import {
+	View,
+	StyleSheet,
+	Button,
+	Text,
+	ScrollView,
+	Switch,
+} from 'react-native';
+import { Avatar, ListItem } from 'react-native-elements';
 
 import * as ImagePicker from 'expo-image-picker';
 import Constants from 'expo-constants';
@@ -18,6 +25,9 @@ import {
 	saveExpoPushToken,
 } from '../../../services/Firebase';
 import { AuthUserContext } from '../../AuthUserProvider';
+import InfoText from '../../../components/InfoText';
+import BaseIcon from './Icon';
+import Chevron from './Chevron';
 
 export default function HomeScreen() {
 	useStatusBar('dark-content');
@@ -81,41 +91,117 @@ export default function HomeScreen() {
 	}
 
 	return (
-		<View style={styles.container}>
-			<Avatar
-				rounded
-				size="large"
-				source={{
-					uri:
-						user?.photoURL ??
-						'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png',
-				}}
-			/>
-			<Text>Welcome {user?.displayName}</Text>
-			<Button title={i18n.t('home.upload-avatar')} onPress={_pickImage} />
-			<Button title={i18n.t('home.sign-out')} onPress={handleSignOut} />
-			<Button
-				title={'Send Push Notification'}
-				onPress={() =>
-					sendPushNotification({
-						to: expoPushToken,
-						sound: 'default',
-						title: 'Original Title',
-						body: 'And here is the body!',
-						data: { data: 'goes here' },
-					})
-				}
-			/>
-		</View>
+		<ScrollView style={styles.scroll}>
+			<View style={styles.userRow}>
+				<View style={styles.userImage}>
+					<Avatar
+						rounded
+						size="large"
+						source={{
+							uri:
+								user?.photoURL ??
+								'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png',
+						}}
+					/>
+				</View>
+				<View>
+					<Text style={{ fontSize: 16 }}>{user?.displayName}</Text>
+					<Text
+						style={{
+							color: 'gray',
+							fontSize: 16,
+						}}
+					>
+						{user?.email}
+					</Text>
+				</View>
+			</View>
+			<InfoText text="Account" />
+			<View>
+				<ListItem
+					title="Push Notifications"
+					containerStyle={styles.listItemContainer}
+					onPress={() =>
+						sendPushNotification({
+							to: expoPushToken,
+							sound: 'default',
+							title: 'Original Title',
+							body: 'And here is the body!',
+							data: { data: 'goes here' },
+						})
+					}
+					rightElement={
+						<Switch onValueChange={() => {}} value={true} />
+					}
+					leftIcon={
+						<BaseIcon
+							containerStyle={{
+								backgroundColor: '#FFADF2',
+							}}
+							icon={{
+								type: 'material',
+								name: 'notifications',
+							}}
+						/>
+					}
+				/>
+				<ListItem
+					title={i18n.t('home.upload-avatar')}
+					containerStyle={styles.listItemContainer}
+					onPress={_pickImage}
+					leftIcon={
+						<BaseIcon
+							containerStyle={{
+								backgroundColor: '#FFADF2',
+							}}
+							icon={{
+								type: 'material',
+								name: 'notifications',
+							}}
+						/>
+					}
+					rightIcon={<Chevron />}
+				/>
+				<ListItem
+					title={i18n.t('home.sign-out')}
+					onPress={handleSignOut}
+					containerStyle={styles.listItemContainer}
+					leftIcon={
+						<BaseIcon
+							containerStyle={{
+								backgroundColor: '#FFADF2',
+							}}
+							icon={{
+								type: 'material',
+								name: 'notifications',
+							}}
+						/>
+					}
+					rightIcon={<Chevron />}
+				/>
+			</View>
+		</ScrollView>
 	);
 }
 
 const styles = StyleSheet.create({
-	container: {
-		flex: 1,
+	scroll: {
+		backgroundColor: 'white',
 	},
-	avatar: {
-		width: 80,
-		height: 80,
+	userRow: {
+		alignItems: 'center',
+		flexDirection: 'row',
+		paddingBottom: 8,
+		paddingLeft: 15,
+		paddingRight: 15,
+		paddingTop: 6,
+	},
+	userImage: {
+		marginRight: 12,
+	},
+	listItemContainer: {
+		height: 55,
+		borderWidth: 0.5,
+		borderColor: '#ECECEC',
 	},
 });
