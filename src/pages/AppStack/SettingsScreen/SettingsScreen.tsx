@@ -163,6 +163,23 @@ export default function HomeScreen() {
 					rightIcon={<Chevron />}
 				/>
 				<ListItem
+					title={i18n.t('home.language')}
+					rightTitle={i18n.locale}
+					rightTitleStyle={{ fontSize: 15 }}
+					onPress={() => {}}
+					containerStyle={styles.listItemContainer}
+					leftIcon={
+						<BaseIcon
+							containerStyle={{ backgroundColor: '#FAD291' }}
+							icon={{
+								type: 'material',
+								name: 'language',
+							}}
+						/>
+					}
+					rightIcon={<Chevron />}
+				/>
+				<ListItem
 					title={i18n.t('home.sign-out')}
 					onPress={handleSignOut}
 					containerStyle={styles.listItemContainer}
