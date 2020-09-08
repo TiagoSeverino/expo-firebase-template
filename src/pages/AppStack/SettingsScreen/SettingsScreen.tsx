@@ -25,9 +25,9 @@ import {
 	saveExpoPushToken,
 } from '../../../services/Firebase';
 import { AuthUserContext } from '../../AuthUserProvider';
-import InfoText from '../../../components/InfoText';
-import BaseIcon from './Icon';
-import Chevron from './Chevron';
+import InfoText from '../../../components/Menu/InfoText';
+import BaseIcon from '../../../components/Menu/Icon';
+import Chevron from '../../../components/Menu/Chevron';
 
 export default function HomeScreen() {
 	useStatusBar('dark-content');
