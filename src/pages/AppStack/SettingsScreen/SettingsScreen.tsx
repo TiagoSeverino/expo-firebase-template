@@ -152,11 +152,11 @@ export default function HomeScreen() {
 					leftIcon={
 						<BaseIcon
 							containerStyle={{
-								backgroundColor: '#FFADF2',
+								backgroundColor: '#57DCE7',
 							}}
 							icon={{
 								type: 'material',
-								name: 'notifications',
+								name: 'add-a-photo',
 							}}
 						/>
 					}
@@ -166,18 +166,7 @@ export default function HomeScreen() {
 					title={i18n.t('home.sign-out')}
 					onPress={handleSignOut}
 					containerStyle={styles.listItemContainer}
-					leftIcon={
-						<BaseIcon
-							containerStyle={{
-								backgroundColor: '#FFADF2',
-							}}
-							icon={{
-								type: 'material',
-								name: 'notifications',
-							}}
-						/>
-					}
-					rightIcon={<Chevron />}
+					titleStyle={styles.logoutText}
 				/>
 			</View>
 		</ScrollView>
@@ -203,5 +192,10 @@ const styles = StyleSheet.create({
 		height: 55,
 		borderWidth: 0.5,
 		borderColor: '#ECECEC',
+	},
+	logoutText: {
+		color: '#007AFF',
+		fontSize: 18,
+		fontWeight: '400',
 	},
 });
