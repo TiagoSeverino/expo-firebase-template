@@ -16,7 +16,7 @@ import useStatusBar from '../../hooks/useStatusBar';
 const validationSchema = Yup.object().shape({
 	email: Yup.string()
 		.required(i18n.t('login.registered-email'))
-		.email()
+		.email(i18n.t('register.enter-valid-mail'))
 		.label('Email'),
 	password: Yup.string()
 		.required()
