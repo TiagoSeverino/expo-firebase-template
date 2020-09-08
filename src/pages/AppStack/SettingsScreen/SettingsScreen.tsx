@@ -18,6 +18,7 @@ import {
 	sendPushNotification,
 } from '../../../services/Notifications';
 import i18n from '../../../services/Translations';
+import { countryCodeToFlag } from '../../../utils/countries';
 import useStatusBar from '../../../hooks/useStatusBar';
 import {
 	logout,
@@ -164,7 +165,7 @@ export default function HomeScreen() {
 				/>
 				<ListItem
 					title={i18n.t('settings.language')}
-					rightTitle={i18n.locale}
+					rightTitle={countryCodeToFlag(i18n.locale)}
 					rightTitleStyle={{ fontSize: 15 }}
 					onPress={() => {}}
 					containerStyle={styles.listItemContainer}
