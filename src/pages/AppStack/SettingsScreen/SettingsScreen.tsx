@@ -18,6 +18,7 @@ import {
 	sendPushNotification,
 } from '../../../services/Notifications';
 import i18n from '../../../services/Translations';
+import { countryCodeToFlag } from '../../../utils/countries';
 import useStatusBar from '../../../hooks/useStatusBar';
 import {
 	logout,
@@ -119,8 +120,7 @@ export default function HomeScreen() {
 			<InfoText text="Account" />
 			<View>
 				<ListItem
-					title="Push Notifications"
-					containerStyle={styles.listItemContainer}
+					style={styles.listItemContainer}
 					onPress={() =>
 						sendPushNotification({
 							to: expoPushToken,
@@ -130,44 +130,72 @@ export default function HomeScreen() {
 							data: { data: 'goes here' },
 						})
 					}
-					rightElement={
-						<Switch onValueChange={() => {}} value={true} />
-					}
-					leftIcon={
-						<BaseIcon
-							containerStyle={{
-								backgroundColor: '#FFADF2',
-							}}
-							icon={{
-								type: 'material',
-								name: 'notifications',
-							}}
-						/>
-					}
-				/>
+				>
+					<BaseIcon
+						containerStyle={{
+							backgroundColor: '#FFADF2',
+						}}
+						icon={{
+							type: 'material',
+							name: 'notifications',
+						}}
+					/>
+					<ListItem.Content>
+						<ListItem.Title>
+							{i18n.t('settings.push-notifications')}
+						</ListItem.Title>
+					</ListItem.Content>
+					<Switch onValueChange={() => {}} value={true} />
+				</ListItem>
+
+				<ListItem style={styles.listItemContainer} onPress={_pickImage}>
+					<BaseIcon
+						containerStyle={{
+							backgroundColor: '#57DCE7',
+						}}
+						icon={{
+							type: 'material',
+							name: 'add-a-photo',
+						}}
+					/>
+					<ListItem.Content>
+						<ListItem.Title>
+							{i18n.t('settings.upload-avatar')}
+						</ListItem.Title>
+					</ListItem.Content>
+					<ListItem.Chevron />
+				</ListItem>
+
+				<ListItem style={styles.listItemContainer}>
+					<BaseIcon
+						containerStyle={{ backgroundColor: '#FAD291' }}
+						icon={{
+							type: 'material',
+							name: 'language',
+						}}
+					/>
+					<ListItem.Content>
+						<ListItem.Title>
+							{i18n.t('settings.language')}
+						</ListItem.Title>
+						<ListItem.Subtitle>
+							{countryCodeToFlag(i18n.locale)}
+						</ListItem.Subtitle>
+					</ListItem.Content>
+					<Text>{i18n.locale}</Text>
+					<ListItem.Chevron />
+				</ListItem>
+
 				<ListItem
-					title={i18n.t('home.upload-avatar')}
-					containerStyle={styles.listItemContainer}
-					onPress={_pickImage}
-					leftIcon={
-						<BaseIcon
-							containerStyle={{
-								backgroundColor: '#57DCE7',
-							}}
-							icon={{
-								type: 'material',
-								name: 'add-a-photo',
-							}}
-						/>
-					}
-					rightIcon={<Chevron />}
-				/>
-				<ListItem
-					title={i18n.t('home.sign-out')}
 					onPress={handleSignOut}
-					containerStyle={styles.listItemContainer}
-					titleStyle={styles.logoutText}
-				/>
+					style={styles.listItemContainer}
+				>
+					<ListItem.Content>
+						<ListItem.Title style={styles.logoutText}>
+							{i18n.t('settings.sign-out')}
+						</ListItem.Title>
+					</ListItem.Content>
+				</ListItem>
 			</View>
 		</ScrollView>
 	);

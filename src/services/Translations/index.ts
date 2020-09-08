@@ -28,9 +28,45 @@ i18n.translations = {
 		'forgot-password': {
 			'forgot-password': 'Forgot Password',
 		},
-		home: {
-			'sign-out': 'Sign out',
+		home: {},
+		settings: {
+			'push-notifications': 'Push Notifications',
 			'upload-avatar': 'Upload Avatar',
+			language: 'Language',
+			'sign-out': 'Sign out',
+		},
+	},
+	pt: {
+		welcome: {
+			title: 'Expo Firebase Starter',
+			login: 'Entrar',
+			register: 'Registar',
+			'fb-login': 'Continuar com Facebook',
+			'fb-login-error': 'Erro ao entrar com facebook',
+		},
+		register: {
+			'enter-name': 'Nome',
+			'enter-email': 'Email',
+			'enter-password': 'Password',
+			'confirm-password': 'Confirmar password',
+			'enter-valid-mail': 'Introduza um email válido',
+			'pass-min': 'A password deve ter pelo menos %{n} caracteres',
+			'pass-confirm': 'As passwords não correspondem',
+			'pass-required': 'Confirme a password',
+		},
+		login: {
+			'registered-email': 'Introduza um email registado',
+			'forgot-password': 'Esqueceu-se da password?',
+		},
+		'forgot-password': {
+			'forgot-password': 'Recuperar Password',
+		},
+		home: {},
+		settings: {
+			'push-notifications': 'Notiicações',
+			'upload-avatar': 'Atualizar Avatar',
+			language: 'Linguagem',
+			'sign-out': 'Sair',
 		},
 	},
 };
