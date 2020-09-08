@@ -5,6 +5,7 @@ export default {
 	white: '#ffffff',
 	ghostWhite: '#f8f8ff',
 	lightGrey: '#f9f9f9',
+	lightGrey2: '#D1D1D6',
 	mediumGrey: '#6e6869',
 	red: '#fc5c65',
 	facebook: '#3b5998',
