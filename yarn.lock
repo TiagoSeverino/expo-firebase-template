@@ -5999,6 +5999,11 @@ react-native-iphone-x-helper@^1.2.1:
   resolved "https://registry.yarnpkg.com/react-native-iphone-x-helper/-/react-native-iphone-x-helper-1.2.1.tgz#645e2ffbbb49e80844bb4cbbe34a126fda1e6772"
   integrity sha512-/VbpIEp8tSNNHIvstuA3Swx610whci1Zpc9mqNkqn14DkMbw+ORviln2u0XyHG1kPvvwTNGZY6QpeFwxYaSdbQ==
 
+react-native-picker-scrollview@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/react-native-picker-scrollview/-/react-native-picker-scrollview-1.0.1.tgz#db2d2ba0f3154767df4651dd76bad4e1849e312b"
+  integrity sha512-6N4IuAwLVDLoO3IUCW0QzWJrafXVi7WylofaPg4PNPfPRFOYAsGKMN5yEPw463tWtmbBxP6vZEIOfGl93d9Aeg==
+
 react-native-ratings@^7.2.0:
   version "7.2.0"
   resolved "https://registry.yarnpkg.com/react-native-ratings/-/react-native-ratings-7.2.0.tgz#8523e98868470855ec1d2feb112e466e17a1fd9f"
