@@ -63,7 +63,7 @@ i18n.translations = {
 		},
 		home: {},
 		settings: {
-			'push-notifications': 'Notiicações',
+			'push-notifications': 'Notificações',
 			'upload-avatar': 'Atualizar Avatar',
 			language: 'Linguagem',
 			'sign-out': 'Sair',
