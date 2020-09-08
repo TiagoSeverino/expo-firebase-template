@@ -119,7 +119,7 @@ export default function HomeScreen() {
 			<InfoText text="Account" />
 			<View>
 				<ListItem
-					title="Push Notifications"
+					title={i18n.t('settings.push-notifications')}
 					containerStyle={styles.listItemContainer}
 					onPress={() =>
 						sendPushNotification({
@@ -146,7 +146,7 @@ export default function HomeScreen() {
 					}
 				/>
 				<ListItem
-					title={i18n.t('home.upload-avatar')}
+					title={i18n.t('settings.upload-avatar')}
 					containerStyle={styles.listItemContainer}
 					onPress={_pickImage}
 					leftIcon={
@@ -163,7 +163,7 @@ export default function HomeScreen() {
 					rightIcon={<Chevron />}
 				/>
 				<ListItem
-					title={i18n.t('home.language')}
+					title={i18n.t('settings.language')}
 					rightTitle={i18n.locale}
 					rightTitleStyle={{ fontSize: 15 }}
 					onPress={() => {}}
@@ -180,7 +180,7 @@ export default function HomeScreen() {
 					rightIcon={<Chevron />}
 				/>
 				<ListItem
-					title={i18n.t('home.sign-out')}
+					title={i18n.t('settings.sign-out')}
 					onPress={handleSignOut}
 					containerStyle={styles.listItemContainer}
 					titleStyle={styles.logoutText}
