@@ -29,6 +29,10 @@ Is a quicker way to start with Expo + Firebase projects. It includes:
 -   Implement Password Reset Screen
 -   All components are now functional components and use [React Hooks](https://reactjs.org/docs/hooks-intro.html)
 
+
+## Find it on Expo
+https://expo.io/@tiagoseverino/expo-firebase-template
+
 ## Installation
 
 -   Clone this repo
