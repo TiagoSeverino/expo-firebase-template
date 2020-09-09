@@ -28,7 +28,6 @@ import {
 import { AuthUserContext } from '../../AuthUserProvider';
 import InfoText from '../../../components/Menu/InfoText';
 import BaseIcon from '../../../components/Menu/Icon';
-import Chevron from '../../../components/Menu/Chevron';
 
 export default function HomeScreen() {
 	useStatusBar('dark-content');
