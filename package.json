@@ -22,7 +22,7 @@
     "expo-localization": "~9.0.0",
     "expo-notifications": "~0.7.2",
     "expo-permissions": "~9.3.0",
-    "expo-updates": "~0.3.3",
+    "expo-updates": "~0.3.4",
     "firebase": "7.9.0",
     "formik": "2.1.5",
     "i18n-js": "3.7.1",
