@@ -3642,10 +3642,10 @@ expo-font@~8.3.0:
     fbjs "1.0.0"
     fontfaceobserver "^2.1.0"
 
-expo-image-picker@~9.1.0:
-  version "9.1.0"
-  resolved "https://registry.yarnpkg.com/expo-image-picker/-/expo-image-picker-9.1.0.tgz#296bfd48241f2da56f09a9ac4f77428454f0c8e4"
-  integrity sha512-vItMawhENyaZI3WEaGzzzS6oDnoIHFnhIUpP71CPX9oFSivSV2s1+RF0ezCMxAB8ifrKw9zBmKyuMtjhVI906Q==
+expo-image-picker@~9.1.1:
+  version "9.1.1"
+  resolved "https://registry.yarnpkg.com/expo-image-picker/-/expo-image-picker-9.1.1.tgz#42abe9deb595fa9f9d8ac0d2ba8aad2cd6f69581"
+  integrity sha512-Etz2OQhRflfx+xFbSdma8QLZsnV/yq0M/yqYlsi3/RLiWAQYM/D/VmRfDDPiG10gm+KX3Xb5iKplNjPrWeTuQg==
   dependencies:
     expo-permissions "~9.3.0"
     uuid "7.0.2"
