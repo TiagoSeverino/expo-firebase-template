@@ -1,17 +1,13 @@
 import React, { useState, useEffect, useContext } from 'react';
-import {
-	View,
-	StyleSheet,
-	Button,
-	Text,
-	ScrollView,
-	Switch,
-} from 'react-native';
+import { View, StyleSheet, Text, ScrollView, Switch } from 'react-native';
 import { Avatar, ListItem } from 'react-native-elements';
 
 import * as ImagePicker from 'expo-image-picker';
 import Constants from 'expo-constants';
 import * as Permissions from 'expo-permissions';
+import * as Updates from 'expo-updates';
+
+import ScrollPicker from 'react-native-picker-scrollview';
 
 import {
 	registerForPushNotificationsAsync,
@@ -33,6 +29,7 @@ export default function HomeScreen() {
 	useStatusBar('dark-content');
 
 	const [expoPushToken, setExpoPushToken] = useState('');
+	const [selectCountry, setSelectCountry] = useState(false);
 	const { user, setUser } = useContext(AuthUserContext);
 
 	const [, updateState] = React.useState();
@@ -165,7 +162,10 @@ export default function HomeScreen() {
 					<ListItem.Chevron />
 				</ListItem>
 
-				<ListItem style={styles.listItemContainer}>
+				<ListItem
+					style={styles.listItemContainer}
+					onPress={() => setSelectCountry(true)}
+				>
 					<BaseIcon
 						containerStyle={{ backgroundColor: '#FAD291' }}
 						icon={{
@@ -196,6 +196,51 @@ export default function HomeScreen() {
 					</ListItem.Content>
 				</ListItem>
 			</View>
+
+			{selectCountry && (
+				<View>
+					<ListItem
+						onPress={() => {
+							Updates.reloadAsync();
+						}}
+						style={{
+							...styles.listItemContainer,
+							alignContent: 'space-around',
+						}}
+					>
+						<ListItem.Content>
+							<ListItem.Title style={styles.saveLanguageText}>
+								Save
+							</ListItem.Title>
+						</ListItem.Content>
+					</ListItem>
+					<ScrollPicker
+						dataSource={Object.keys(i18n.translations).map(
+							(k) => `${k} - ${countryCodeToFlag(k)}`
+						)}
+						selectedIndex={Object.keys(i18n.translations).indexOf(
+							i18n.locale
+						)}
+						itemHeight={50}
+						wrapperHeight={250}
+						wrapperColor={'#ffffff'}
+						highlightColor={'#d8d8d8'}
+						renderItem={(data, index, isSelected) => {
+							return (
+								<View>
+									<Text>{data}</Text>
+								</View>
+							);
+						}}
+						onValueChange={(data, selectedIndex) => {
+							i18n.locale = Object.keys(i18n.translations)[
+								selectedIndex
+							];
+							forceUpdate();
+						}}
+					/>
+				</View>
+			)}
 		</ScrollView>
 	);
 }
@@ -224,5 +269,11 @@ const styles = StyleSheet.create({
 		color: '#007AFF',
 		fontSize: 18,
 		fontWeight: '400',
+	},
+	saveLanguageText: {
+		color: '#007AFF',
+		fontSize: 18,
+		fontWeight: '400',
+		alignSelf: 'flex-end',
 	},
 });
