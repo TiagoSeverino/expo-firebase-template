@@ -9,11 +9,11 @@ YellowBox.ignoreWarnings(['Setting a timer']);
 export default function App() {
 	useEffect(() => {
 		async function updateApp() {
-			const { isAvailable } = await Updates.checkForUpdateAsync();
+			try {
+				const { isAvailable } = await Updates.checkForUpdateAsync();
 
-			if (isAvailable) {
-				await Updates.fetchUpdateAsync();
-			}
+				if (isAvailable) await Updates.fetchUpdateAsync();
+			} catch (ex) {}
 		}
 
 		updateApp();
