@@ -1,5 +1,6 @@
 import * as Localization from 'expo-localization';
 import i18n from 'i18n-js';
+import AsyncStorage from '@react-native-community/async-storage';
 
 // Set the key-value pairs for the different languages you want to support.
 i18n.translations = {
@@ -72,7 +73,14 @@ i18n.translations = {
 };
 // Set the locale once at the beginning of your app.
 i18n.locale = Localization.locale;
+AsyncStorage.getItem('@language').then((lang) => {
+	if (lang) i18n.locale = lang;
+});
+
 // When a value is missing from a language it'll fallback to another language with the key present.
 i18n.fallbacks = 'en-US';
 
 export default i18n;
+
+export const saveLanguage = () =>
+	AsyncStorage.setItem('@language', i18n.locale);

@@ -13,7 +13,7 @@ import {
 	registerForPushNotificationsAsync,
 	sendPushNotification,
 } from '../../../services/Notifications';
-import i18n from '../../../services/Translations';
+import i18n, { saveLanguage } from '../../../services/Translations';
 import { countryCodeToFlag } from '../../../utils/countries';
 import useStatusBar from '../../../hooks/useStatusBar';
 import {
@@ -200,9 +200,9 @@ export default function HomeScreen() {
 			{selectCountry && (
 				<View>
 					<ListItem
-						onPress={() => {
-							Updates.reloadAsync();
-						}}
+						onPress={() =>
+							saveLanguage().then(() => Updates.reloadAsync())
+						}
 						style={{
 							...styles.listItemContainer,
 							alignContent: 'space-around',
